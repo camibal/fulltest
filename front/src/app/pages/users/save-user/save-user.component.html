@@ -1,0 +1,56 @@
+<!-- BUTTON MODAL -->
+<button type="button" (click)="showModalDialog()" pButton icon="pi pi-plus-circle" label="Add User"
+    class="mr-2 ui-button-primary"></button>
+<!-- MODAL -->
+<p-dialog header="Save Confirm" [(visible)]="displayModal" [modal]="true" [style]="{width: '30vw'}"
+    [baseZIndex]="10000" [draggable]="false" [resizable]="false" class="form-save">
+    <form [formGroup]="UsersForm" (ngSubmit)="saveUser()" class="mt-4">
+        <div class="ui-fluid">
+            <div class="p-field">
+                <label for="firstname1">Name</label>
+                <input id="firstname1" class="form-input" type="text" pInputText formControlName="name" required>
+                <!-- message -->
+                <div class="alert-danger" *ngIf="name.invalid && (name.dirty || name.touched)">
+                    <div *ngIf="name.errors.required" class="container-error-message">
+                        required Name
+                    </div>
+                    <div *ngIf="name.errors.minlength" class="container-error-message">
+                        Must be at least 3 characters
+                    </div>
+                </div>
+            </div>
+            <div class="p-field">
+                <label for="lastname2">Email</label>
+                <input id="lastname2" type="text" class="form-input" pInputText formControlName="email" required>
+                <!-- message -->
+                <div class="alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+                    <div *ngIf="email.errors.required" class="container-error-message">
+                        required Email
+                    </div>
+                    <div *ngIf="email.errors.minlength" class="container-error-message">
+                        Must be at least 3 characters
+                    </div>
+                </div>
+            </div>
+            <div class="p-field">
+                <label for="lastname3">Age</label>
+                <input id="lastname3" type="number" class="form-input" pInputText formControlName="age" required>
+                <!-- message -->
+                <div class="alert-danger" *ngIf="age.invalid && (age.dirty || age.touched)">
+                    <div *ngIf="age.errors.required" class="container-error-message">age
+                        required Age
+                    </div>
+                    <div *ngIf="age.errors.minlength" class="container-error-message">
+                        Must be at least 3 characters
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p-footer class="textt-end">
+            <button type="button" pButton icon="pi pi-times" (click)="displayModal=false" label="Cancel"
+                class="ui-button-secondary mt-4"></button>
+            <button type="submit" pButton icon="pi pi-check" label="Save" class="ml-3 ui-button-primary"
+                [disabled]="!UsersForm.valid"></button>
+        </p-footer>
+    </form>
+</p-dialog>
