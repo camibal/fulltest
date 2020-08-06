@@ -15,6 +15,6 @@ export class LoginGuard implements CanActivate {
     if (localStorage.getItem('data')) {
       return true;
     }
-    return this.router.parseUrl('auth/login');
+    return this.router.parseUrl('auth');
   }
 }

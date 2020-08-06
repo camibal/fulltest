@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { LoginGuard } from '../guards/login.guard';
+import { UsersComponent } from './users/users.component';
+import { CitiesComponent } from './cities/cities.component';
+import { FootballTeamsComponent } from './football-teams/football-teams.component';
 
 const routes: Routes = [
-  { path: '', component: PagesComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [LoginGuard] }
+  { path: '', component: DashboardComponent },
+  { path: 'users', component: UsersComponent },
+  { path: 'cities', component: CitiesComponent },
+  { path: 'football-teams', component: FootballTeamsComponent },
 ];
 
-@NgModule({
+@NgModule({ 
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
