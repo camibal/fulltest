@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   saveLogin() {
     if (this.LoginForm.valid) {
       localStorage.setItem('data', JSON.stringify(this.LoginForm.value));
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['pages/dashboard']);
     }
   }
   get username() { return this.LoginForm.get('username'); }

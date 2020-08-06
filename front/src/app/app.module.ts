@@ -26,7 +26,6 @@ import { UsersComponent } from './pages/users/users.component';
 import { SaveUserComponent } from './pages/users/save-user/save-user.component';
 import { UpdateUserComponent } from './pages/users/update-user/update-user.component';
 import { DeleteUserComponent } from './pages/users/delete-user/delete-user.component';
-import { LoginComponent } from './pages/auth/login/login.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +46,6 @@ import { LoginComponent } from './pages/auth/login/login.component';
     SaveUserComponent,
     UpdateUserComponent,
     DeleteUserComponent,
-    LoginComponent
   ],
   imports: [
     BrowserModule,
