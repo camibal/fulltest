@@ -13,7 +13,7 @@ export class StartGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     if (localStorage.getItem('data')) {
-      return this.router.parseUrl('home');
+      return this.router.parseUrl('dashboard');
     }
     return true;
   }

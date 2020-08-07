@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   saveLogin() {
     if (this.LoginForm.valid) {
       localStorage.setItem('data', JSON.stringify(this.LoginForm.value));
-      this.router.navigate(['pages/dashboard']);
+      this.router.navigate(['/']);
     }
   }
   get username() { return this.LoginForm.get('username'); }

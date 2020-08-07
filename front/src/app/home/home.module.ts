@@ -49,6 +49,7 @@ import { DeleteUserComponent } from './users/delete-user/delete-user.component';
     FormsModule,
     ReactiveFormsModule,
     SharedModule
-  ]
+  ],
+  bootstrap: [HomeModule]
 })
 export class HomeModule { }

@@ -1,3 +1,5 @@
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
 <div class="row m-0">
     <div class="col-md-3 col-xl-2"></div>
     <div class="col-md-9 col-xl-10 bg-col-10">
@@ -25,7 +27,7 @@
                                 <div class="p-grid p-justify-center mr-2 mt-3">
                                     <app-update-team [teams]="teams" (send)="getEvent($event)" class="p-col-3">
                                     </app-update-team>
-                        
+
                                     <app-delete-team [teams]="teams" (send)="getEvent($event)" class="p-col-3">
                                     </app-delete-team>
                                 </div>
@@ -37,3 +39,4 @@
         </div>
     </div>
 </div>
+<app-footer></app-footer>
