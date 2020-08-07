@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CitiesService } from 'src/app/services/cities.service';
 
 @Component({
   selector: 'app-cities',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cities.component.scss']
 })
 export class CitiesComponent implements OnInit {
+  getCitiess;
 
-  constructor() { }
+  constructor(private citiesService: CitiesService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getCities();
   }
 
+  getCities() {
+    this.citiesService.getCities().subscribe(data => {
+      this.getCitiess = data;
+    }, err => console.error(err)
+    );
+  }
+
+  getEvent(cities: any){
+    this.getCities();
+  }
 }
+
