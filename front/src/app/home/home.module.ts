@@ -7,6 +7,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from '../components/navbar/navbar.component';
 import { SidebarComponent } from '../components/sidebar/sidebar.component';
 import { FooterComponent } from '../components/footer/footer.component';
+import { CitiesComponent } from './cities/cities.component';
+import { UsersComponent } from './users/users.component';
+import { FootballTeamsComponent } from './football-teams/football-teams.component';
 
 
 @NgModule({
@@ -16,6 +19,9 @@ import { FooterComponent } from '../components/footer/footer.component';
      NavbarComponent,
      SidebarComponent,
      FooterComponent,
+     CitiesComponent,
+     UsersComponent,
+     FootballTeamsComponent,
     ],
   imports: [
     CommonModule,
