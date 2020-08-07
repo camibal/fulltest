@@ -20,13 +20,14 @@ import { UpdateModalComponent } from './cities/update-modal/update-modal.compone
 import { FootballTeamsComponent } from './football-teams/football-teams.component';
 import { CitiesComponent } from './cities/cities.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PagesComponent } from './pages.component';
 
 
 @NgModule({
   declarations: [
-    NavbarComponent,
-    SidebarComponent,
-    FooterComponent,
+    // NavbarComponent,
+    // SidebarComponent,
+    // FooterComponent,
     DashboardComponent,
 
     UsersComponent,
@@ -48,6 +49,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     PagesRoutingModule,
     SharedModule
-  ]
+  ],
+  bootstrap: [PagesComponent]
 })
 export class PagesModule { }
