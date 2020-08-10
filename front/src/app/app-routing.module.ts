@@ -5,7 +5,8 @@ import { StartGuard } from './guards/start.guard';
 
 const routes: Routes = [
   //login
-  { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule), canActivate: [StartGuard] },
+  { path: 'login', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule), canActivate: [StartGuard] },
+  //Home
   { path: '', loadChildren: () => import('./home/home.module').then(m => m.HomeModule), canActivate: [LoginGuard] },
 ];
 

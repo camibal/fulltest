@@ -9,10 +9,21 @@ import { FootballTeamsComponent } from './football-teams/football-teams.componen
 
 const routes: Routes = [
   // { path: '', component: HomeComponent },
-  { path: '', component: DashboardComponent },
-  { path: 'users', component: UsersComponent },
-  { path: 'cities', component: CitiesComponent },
-  { path: 'football-teams', component: FootballTeamsComponent },
+  // { path: 'dashboard', component: DashboardComponent },
+  // { path: 'users', component: UsersComponent },
+  // { path: 'cities', component: CitiesComponent },
+  // { path: 'football-teams', component: FootballTeamsComponent },
+
+  {
+    path: '',
+    component: HomeComponent,
+    children: [
+      { path: '', component: DashboardComponent },
+      { path: 'users', component: UsersComponent },
+      { path: 'cities', component: CitiesComponent },
+      { path: 'football-teams', component: FootballTeamsComponent },
+    ]
+  }
 ];
 
 @NgModule({

@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
 
   removeItem(){
     localStorage.removeItem('data');
-    this.router.navigate(['auth/login']);
+    this.router.navigate(['login']);
   }
 
 }
