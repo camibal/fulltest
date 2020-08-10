@@ -8,12 +8,6 @@ import { CitiesComponent } from './cities/cities.component';
 import { FootballTeamsComponent } from './football-teams/football-teams.component';
 
 const routes: Routes = [
-  // { path: '', component: HomeComponent },
-  // { path: 'dashboard', component: DashboardComponent },
-  // { path: 'users', component: UsersComponent },
-  // { path: 'cities', component: CitiesComponent },
-  // { path: 'football-teams', component: FootballTeamsComponent },
-
   {
     path: '',
     component: HomeComponent,
